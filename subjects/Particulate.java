@@ -1,17 +1,20 @@
 package subjects;
 
+import coords.Position;
+
 /**
  * particulate - класс сыпучих или жидких веществ. Они могут течь вправо, влево, вниз.
  */
-abstract class particulate {
+public class Particulate {
     //В данные методы вводится позиция, куда выльется жидкость при откртытии шлюза
+    public Position position;
     void down(int x, int y){
-        //Высыпается или выливается с последствиями
+
     }
     void right(int x, int y){
-        //Высыпается или выливается с последствиями
+
     }
     void left(int x, int y){
-        //Высыпается или выливается с последствиями
+
     }
 }
