@@ -17,19 +17,12 @@ public class Main {
         //UPD: координаты реализованы, но нужно сделать генерацию.----------------------
         //(То, что находится межу шлюзами,), определить позиции Hole и всего другого.  |
         // По-хорошему необходимо сделать автоматтческое создание карты.<---------------
-        // Hole hole = new Hole();
-        // hole.fear();
-        // Win win = new Win();
-        // win.EpicWin(hole);
-        int a = 1;
-        int b = 2;
-        Position xy = new Position(a, b); //ПРОБЛЕМА С СОЗДАНИЕМ ЭКЗЕМПЛЯРА КЛАССА!!!
-        Guntrap guntrap = new Guntrap(xy);
-        System.out.println(guntrap.position.x);
-        System.out.println(guntrap.position.y);
-        guntrap.replace();
-        System.out.println(guntrap.position.x);
-        System.out.println(guntrap.position.y);
+        Position startHolePosition = new Position(1, 2);
+        Position lavaPosition = new Position(1, 2);
+        Hole hole = new Hole(startHolePosition);
+        Lava lava = new Lava(lavaPosition);
+        boolean death = hole.isDeath(lava.position);
+        System.out.println(death);
     }
 
 }

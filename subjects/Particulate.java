@@ -1,5 +1,7 @@
 package subjects;
-
+import units.Hole;
+import actions.HoleDeath;
+import coords.BetweenPositions;
 import coords.Position;
 
 /**
@@ -8,13 +10,25 @@ import coords.Position;
 public class Particulate {
     //В данные методы вводится позиция, куда выльется жидкость при откртытии шлюза
     public Position position;
-    void down(int x, int y){
-
+    public Particulate(Position position){
+        this.position = position;
     }
-    void right(int x, int y){
-
+    // public boolean isDeath(Position holePosition){
+    //     if (this.position == holePosition){
+    //         HoleDeath.GameOver();
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
+    void down(Position position){
+        this.position.y--;
     }
-    void left(int x, int y){
-
+    void right(Position position){
+        this.position.x++;
+    }
+    void left(Position position){
+        this.position.x--;
     }
 }

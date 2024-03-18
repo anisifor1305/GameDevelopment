@@ -1,3 +1,5 @@
+//Класс шлюза. Когда шлюз открывается - этот повод попытаться произвести 
+//action на смежных позициях.
 package subjects;
 
 import coords.BetweenPositions;
